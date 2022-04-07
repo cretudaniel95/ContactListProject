@@ -13,16 +13,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.supercsv.io.CsvBeanWriter;
 import org.supercsv.io.ICsvBeanWriter;
 import org.supercsv.prefs.CsvPreference;
-//import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-//import java.nio.file.Files;
-//import java.nio.file.Path;
-//import java.nio.file.Paths;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -31,8 +24,6 @@ import java.util.UUID;
 
 @Controller
 public class HomeController {
-
-//    private static String uploadDir = "src/main/resources/static/photos";
 
     @Autowired
     ContactService contactService;
@@ -86,7 +77,6 @@ public class HomeController {
         updatedContact.setId(contact.getId());
         updatedContact.setName(contact.getName());
         updatedContact.setAddress(contact.getAddress());
-//        updatedContact.setImageName(contact.getImageName());
 
         model.addAttribute("contact", updatedContact);
 
